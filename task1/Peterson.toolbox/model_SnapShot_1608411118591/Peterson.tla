@@ -1,6 +1,5 @@
 ------------------------------ MODULE Peterson ------------------------------
 
-
 EXTENDS Integers
 
 VARIABLES 
@@ -19,21 +18,18 @@ Init ==
     /\ want = [i \in {0, 1} |-> FALSE]
     /\ turn \in {0, 1}
     /\ processState = [i \in {0, 1} |-> "none"]
-    
-   
+       
 ProcessWantAccess(p) ==
     /\ processState[p] = "none"
     /\ want' = [want EXCEPT ![p] = TRUE]
     /\ processState' = [processState EXCEPT ![p] = "wantAccess"]
     /\ UNCHANGED <<turn>>
 
- 
 ProcessBeginWaiting(p) ==
     /\ processState[p] = "wantAccess"
     /\ turn' = 1 - p
     /\ processState' = [processState EXCEPT ![p] = "waiting"]
     /\ UNCHANGED <<want>>
-    
 
 ProcessEnterCritical(p) ==
     /\ processState[p] = "waiting"
@@ -41,13 +37,11 @@ ProcessEnterCritical(p) ==
     /\ processState' = [processState EXCEPT ![p] = "critical"]
     /\ UNCHANGED <<want, turn>>
 
-
 ProcessExitCritical(p) ==
     /\ processState[p] = "critical"
     /\ processState' = [processState EXCEPT ![p] = "none"]
     /\ want' = [want EXCEPT ![p] = FALSE]
     /\ UNCHANGED <<turn>>
-
 
 Next ==
     \E p \in {0, 1} :
@@ -56,23 +50,21 @@ Next ==
         \/ ProcessEnterCritical(p)
         \/ ProcessExitCritical(p)
     
-
 Spec == Init /\ [][Next]_vars 
 
-
 SpecWithFairness == Spec /\ WF_vars(Next) /\ \A p \in {0, 1} : WF_vars(ProcessWantAccess(p))
-
 
 MutualExclusion == ~(processState[0] = "critical" /\ processState[1] = "critical")
 
 THEOREM Spec => []MutualExclusion
 
-
 WillEventuallyEnterCritical == <>(processState[0] = "critical") /\ <>(processState[1] = "critical")
 
 THEOREM SpecWithFairness => WillEventuallyEnterCritical
 
-
 THEOREM Spec => []TypeOK
 
 =============================================================================
+\* Modification History
+\* Last modified Sat Dec 19 23:50:30 MSK 2020 by simon
+\* Created Sat Dec 19 20:40:01 MSK 2020 by simon
