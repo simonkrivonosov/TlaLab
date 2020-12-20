@@ -1,0 +1,315 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.15 of Day Month 20?? (rev: eb3ff99)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 67 and seed -969550817921682732 with 4 workers on 8 cores with 1214MB heap and 2730MB offheap memory [pid: 73938] (Mac OS X 10.14.6 x86_64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /Users/simon/simon_github/tlaLab/task2/HighLevelSyncTask1/HighLevelSync.toolbox/Model1/MC.tla
+Parsing file /Users/simon/simon_github/tlaLab/task2/HighLevelSyncTask1/HighLevelSync.toolbox/Model1/HighLevelSync.tla
+Parsing file /private/var/folders/_s/wbzvh4qj56j9l42ryw_4_0q80000gn/T/AppTranslocation/F4788274-4072-44C1-AADF-AA7854EC6AEF/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/TLC.tla
+Parsing file /private/var/folders/_s/wbzvh4qj56j9l42ryw_4_0q80000gn/T/AppTranslocation/F4788274-4072-44C1-AADF-AA7854EC6AEF/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/Naturals.tla
+Parsing file /private/var/folders/_s/wbzvh4qj56j9l42ryw_4_0q80000gn/T/AppTranslocation/F4788274-4072-44C1-AADF-AA7854EC6AEF/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/Sequences.tla
+Parsing file /private/var/folders/_s/wbzvh4qj56j9l42ryw_4_0q80000gn/T/AppTranslocation/F4788274-4072-44C1-AADF-AA7854EC6AEF/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202004251858/tla2sany/StandardModules/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module HighLevelSync
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2020-12-20 13:33:01)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2020-12-20 13:33:02.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant FailureCondition is violated.
+@!@!@ENDMSG 2110 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ sync = 0
+/\ counter = 0
+/\ pc = <<"L1", "R1">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <L1 line 42, col 7 to line 44, col 38 of module HighLevelSync>
+/\ sync = 0
+/\ counter = 0
+/\ pc = <<"L2", "R1">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <R1 line 64, col 7 to line 66, col 38 of module HighLevelSync>
+/\ sync = 0
+/\ counter = 0
+/\ pc = <<"L2", "R2">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <R2 line 68, col 7 to line 71, col 26 of module HighLevelSync>
+/\ sync = 0
+/\ counter = 0
+/\ pc = <<"L2", "R3">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <R3 line 73, col 7 to line 76, col 21 of module HighLevelSync>
+/\ sync = 0
+/\ counter = 1
+/\ pc = <<"L2", "R4">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <R4 line 78, col 7 to line 81, col 21 of module HighLevelSync>
+/\ sync = 0
+/\ counter = 2
+/\ pc = <<"L2", "R5">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+7: <R5 line 83, col 7 to line 86, col 26 of module HighLevelSync>
+/\ sync = 1
+/\ counter = 2
+/\ pc = <<"L2", "R1">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+8: <L2 line 46, col 7 to line 49, col 38 of module HighLevelSync>
+/\ sync = 1
+/\ counter = 2
+/\ pc = <<"L3", "R1">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+9: <R1 line 64, col 7 to line 66, col 38 of module HighLevelSync>
+/\ sync = 1
+/\ counter = 2
+/\ pc = <<"L3", "R2">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+10: <R2 line 68, col 7 to line 71, col 26 of module HighLevelSync>
+/\ sync = 0
+/\ counter = 2
+/\ pc = <<"L3", "R3">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+11: <R3 line 73, col 7 to line 76, col 21 of module HighLevelSync>
+/\ sync = 0
+/\ counter = 3
+/\ pc = <<"L3", "R4">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+12: <L3 line 51, col 7 to line 55, col 38 of module HighLevelSync>
+/\ sync = 0
+/\ counter = 3
+/\ pc = <<"L4", "R4">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2020-12-20 13:33:02
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 36, col 1 to line 36, col 4 of module HighLevelSync>: 2:2
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 37, col 9 to line 40, col 60 of module HighLevelSync: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<L1 line 42, col 1 to line 42, col 2 of module HighLevelSync>: 1:24
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 42, col 10 to line 42, col 21 of module HighLevelSync: 98
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 42, col 10 to line 42, col 14 of module HighLevelSync: 74
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 43, col 10 to line 43, col 38 of module HighLevelSync: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 44, col 10 to line 44, col 38 of module HighLevelSync: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<L2 line 46, col 1 to line 46, col 2 of module HighLevelSync>: 6:9
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 46, col 10 to line 46, col 21 of module HighLevelSync: 82
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 46, col 10 to line 46, col 14 of module HighLevelSync: 73
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 47, col 10 to line 47, col 17 of module HighLevelSync: 39
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 47, col 10 to line 47, col 13 of module HighLevelSync: 30
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 48, col 10 to line 48, col 38 of module HighLevelSync: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 49, col 10 to line 49, col 38 of module HighLevelSync: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<L3 line 51, col 1 to line 51, col 2 of module HighLevelSync>: 5:20
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 10 to line 51, col 21 of module HighLevelSync: 88
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 51, col 10 to line 51, col 14 of module HighLevelSync: 72
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 52, col 15 to line 52, col 29 of module HighLevelSync: 20
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 53, col 21 to line 53, col 49 of module HighLevelSync: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 53, col 27 to line 53, col 49 of module HighLevelSync: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 54, col 18 to line 54, col 49 of module HighLevelSync: 15
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 55, col 10 to line 55, col 38 of module HighLevelSync: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<L4 line 57, col 1 to line 57, col 2 of module HighLevelSync>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 57, col 10 to line 57, col 21 of module HighLevelSync: 67
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 59, col 10 to line 59, col 38 of module HighLevelSync: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 60, col 10 to line 60, col 38 of module HighLevelSync: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<R1 line 64, col 1 to line 64, col 2 of module HighLevelSync>: 12:16
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 64, col 10 to line 64, col 21 of module HighLevelSync: 83
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 64, col 10 to line 64, col 14 of module HighLevelSync: 67
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 65, col 10 to line 65, col 38 of module HighLevelSync: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 66, col 10 to line 66, col 38 of module HighLevelSync: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<R2 line 68, col 1 to line 68, col 2 of module HighLevelSync>: 14:16
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 68, col 10 to line 68, col 21 of module HighLevelSync: 81
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 68, col 10 to line 68, col 14 of module HighLevelSync: 65
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 69, col 10 to line 69, col 18 of module HighLevelSync: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 70, col 10 to line 70, col 38 of module HighLevelSync: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 71, col 10 to line 71, col 26 of module HighLevelSync: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<R3 line 73, col 1 to line 73, col 2 of module HighLevelSync>: 14:16
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 73, col 10 to line 73, col 21 of module HighLevelSync: 79
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 73, col 10 to line 73, col 14 of module HighLevelSync: 63
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 74, col 10 to line 74, col 31 of module HighLevelSync: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 75, col 10 to line 75, col 38 of module HighLevelSync: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 76, col 10 to line 76, col 21 of module HighLevelSync: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<R4 line 78, col 1 to line 78, col 2 of module HighLevelSync>: 9:10
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 78, col 10 to line 78, col 21 of module HighLevelSync: 71
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 78, col 10 to line 78, col 14 of module HighLevelSync: 61
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 79, col 10 to line 79, col 31 of module HighLevelSync: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 80, col 10 to line 80, col 38 of module HighLevelSync: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 81, col 10 to line 81, col 21 of module HighLevelSync: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<R5 line 83, col 1 to line 83, col 2 of module HighLevelSync>: 7:9
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 83, col 10 to line 83, col 21 of module HighLevelSync: 69
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 83, col 10 to line 83, col 14 of module HighLevelSync: 60
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 84, col 10 to line 84, col 18 of module HighLevelSync: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 85, col 10 to line 85, col 38 of module HighLevelSync: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 86, col 10 to line 86, col 26 of module HighLevelSync: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<FailureCondition line 96, col 1 to line 96, col 16 of module HighLevelSync>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 96, col 21 to line 96, col 37 of module HighLevelSync: 69
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(27) at 2020-12-20 13:33:02: 107 states generated (4 745 s/min), 69 distinct states found (3 059 ds/min), 2 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+107 states generated, 69 distinct states found, 2 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 27.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2268:0 @!@!@
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 2 and the 95th percentile is 2).
+@!@!@ENDMSG 2268 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 1359ms at (2020-12-20 13:33:02)
+@!@!@ENDMSG 2186 @!@!@
